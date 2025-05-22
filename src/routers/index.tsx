@@ -1,5 +1,13 @@
 import AppLayout from "@/layout/AppLayout";
-import { Landing } from "@/pages";
+import {
+  Job,
+  JobListing,
+  Landing,
+  MyJobs,
+  OnBoarding,
+  PostJob,
+  SavedJobs,
+} from "@/pages";
 import { createBrowserRouter } from "react-router-dom";
 const routers = createBrowserRouter([
   {
@@ -8,6 +16,30 @@ const routers = createBrowserRouter([
       {
         path: "/",
         element: <Landing />,
+      },
+      {
+        path: "/onboarding",
+        element: <OnBoarding />,
+      },
+      {
+        path: "/jobs",
+        element: <JobListing />,
+      },
+      {
+        path: "/job/:id",
+        element: <Job />,
+      },
+      {
+        path: "/post-job",
+        element: <PostJob />,
+      },
+      {
+        path: "/saved-jobs",
+        element: <SavedJobs />,
+      },
+      {
+        path: "/my-jobs",
+        element: <MyJobs />,
       },
     ],
   },
