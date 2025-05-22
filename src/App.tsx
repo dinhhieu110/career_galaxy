@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { RouterProvider } from "react-router-dom";
+import routers from "./routers";
 
 const App = () => {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
-  );
+  return <RouterProvider router={routers} />;
 };
 
 export default App;

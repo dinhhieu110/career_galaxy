@@ -1,4 +1,5 @@
 import AppLayout from "@/layout/AppLayout";
+import { Landing } from "@/pages";
 import { createBrowserRouter } from "react-router-dom";
 const routers = createBrowserRouter([
   {
@@ -6,7 +7,7 @@ const routers = createBrowserRouter([
     children: [
       {
         path: "/",
-        // element: <Landing/>
+        element: <Landing />,
       },
     ],
   },
