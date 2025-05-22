@@ -36,7 +36,7 @@ const Header = () => {
           to="/"
           className="font-extrabold text-[#0186da] text-shadow-md text-4xl flex items-center gap-2"
         >
-          <img src="/logo.png" alt="" className="h-14" />
+          <img src="/logo.png" alt="" className="h-14 mb-1" />
           Career Galaxy
         </Link>
         <div>
