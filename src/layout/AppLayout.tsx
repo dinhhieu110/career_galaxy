@@ -6,8 +6,8 @@ import { Fragment } from "react/jsx-runtime";
 const AppLayout = () => {
   return (
     <Fragment>
-      <main className="min-h-screen px-4 sm:px-8 lg:px-16 xl:px-22 2xl:px-24">
-        <Header />
+      <Header />
+      <main className="min-h-screen mt-6 px-4 sm:px-8 lg:px-16 xl:px-22 2xl:px-24">
         <Outlet />
       </main>
       <Footer />
