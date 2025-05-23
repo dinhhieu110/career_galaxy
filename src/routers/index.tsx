@@ -1,3 +1,4 @@
+import ProtectedAuthProvider from "@/components/ProtectedAuthProvider";
 import AppLayout from "@/layout/AppLayout";
 import {
   Job,
@@ -7,6 +8,7 @@ import {
   OnBoarding,
   PostJob,
   SavedJobs,
+  Auth,
 } from "@/pages";
 import { createBrowserRouter } from "react-router-dom";
 const routers = createBrowserRouter([
@@ -18,28 +20,56 @@ const routers = createBrowserRouter([
         element: <Landing />,
       },
       {
+        path: "/auth",
+        element: <Auth />,
+      },
+      {
         path: "/onboarding",
-        element: <OnBoarding />,
+        element: (
+          <ProtectedAuthProvider>
+            <OnBoarding />,
+          </ProtectedAuthProvider>
+        ),
       },
       {
         path: "/jobs",
-        element: <JobListing />,
+        element: (
+          <ProtectedAuthProvider>
+            <JobListing />
+          </ProtectedAuthProvider>
+        ),
       },
       {
         path: "/job/:id",
-        element: <Job />,
+        element: (
+          <ProtectedAuthProvider>
+            <Job />
+          </ProtectedAuthProvider>
+        ),
       },
       {
         path: "/post-job",
-        element: <PostJob />,
+        element: (
+          <ProtectedAuthProvider>
+            <PostJob />
+          </ProtectedAuthProvider>
+        ),
       },
       {
         path: "/saved-jobs",
-        element: <SavedJobs />,
+        element: (
+          <ProtectedAuthProvider>
+            <SavedJobs />
+          </ProtectedAuthProvider>
+        ),
       },
       {
         path: "/my-jobs",
-        element: <MyJobs />,
+        element: (
+          <ProtectedAuthProvider>
+            <MyJobs />
+          </ProtectedAuthProvider>
+        ),
       },
     ],
   },
